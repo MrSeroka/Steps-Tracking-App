@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_typing_uninitialized_variables
+// ignore_for_file: prefer_typing_uninitialized_variables, null_check_always_fails
 
 import 'package:flutter/material.dart';
 import 'package:trackingsteps/models/fitness_program.dart';
@@ -53,11 +53,11 @@ class _CurrentProgramsState extends State<CurrentPrograms> {
             itemBuilder: (context, index) {
               return Program(
                 program: fitnessProgram[index],
-                active: fitnessProgram[index].type = active,
+                active: fitnessProgram[index].active == active,
                 onTap: _changeProgram,
               );
             },
-            separatorBuilder: (context, index), =>, const SizedBox(width: 20),
+            separatorBuilder: (context, index) => const SizedBox(width: 20),
           ),
         ),
       ],
@@ -79,15 +79,18 @@ class Program extends StatelessWidget {
    this.active = false, 
    required this.onTap,
   );
+  
+
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        onTap(program.type);
+        onTap(program.type!);
       },
       child: Container(
         height: 100,
+
         width: 180,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(15),

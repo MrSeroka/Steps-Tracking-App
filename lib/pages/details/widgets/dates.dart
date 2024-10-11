@@ -61,8 +61,17 @@ final DateTime date;
       
       
       child: DefaultSelectionStyle.merge(
-        Style: const active ? const TextStyle(color: Colors.white) : null,
-        child: Column(
+        selectionColor: active ? Colors.white : Colors.grey,
+        child: 
+        Text(
+         active ? 'Active' : 'Inactive',
+         style: active ? const TextStyle(color: Colors.white) : null,
+        ),
+        ),
+  
+    
+
+        Column(
           children: [
             Text(
               daysOfWeek[date.weekday]!,
@@ -71,7 +80,7 @@ final DateTime date;
                 fontWeight: FontWeight.bold,
               ),
               ),
-  ]),
+              
               const SizedBox(height: 8),
               Text(
                 date.day.toString().padLeft(2, '0'),
@@ -80,8 +89,8 @@ final DateTime date;
                   fontWeight: FontWeight.w500,
                 ),
                 ),
-      ),
-        );
-      )
+          ],
+      ),;
+        
   }
 }

@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/material.dart' show BuildContext, Colors, FontWeight, MaterialApp, StatelessWidget, TextStyle, TextTheme, ThemeData, Widget, WidgetsFlutterBinding, runApp;
 import 'package:flutter/services.dart';
 import 'package:trackingsteps/pages/details/details.dart';
 // ignore: unused_import
