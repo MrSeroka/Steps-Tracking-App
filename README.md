@@ -1,6 +1,12 @@
 # trackingsteps
 
-A new Flutter project.
+Flutter project by Kontrol Rewards
+
+One of our cutting-edge social media platform, where connections are made, ideas are shared and communities thrive. Designed with you in mind, our intuitive interface and feature-rich experience will revolutionize the way you interact and engage online.
+
+Our platform caters to the tech-savvy, socially conscious Millennial generation, offering a vibrant and engaging online experience through tracking your daily steps.
+
+
 
 ## Getting Started
 
